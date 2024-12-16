@@ -7,12 +7,84 @@
   <body>
     <%- include('partials/header.ejs') %>
 
-    <section>
-      <h2>Welcome to Fotheby’s Auction House</h2>
-      <img src="/images/placeholder.jpg" alt="Placeholder" />
-      <p>Explore our auctions and categories to find your perfect piece of fine art.</p>
-    </section>
+<div class="breadcrumb">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>/</li>
+    <li>Auctions</li>
+  </ul>
+</div>
 
-    <%- include('partials/footer.ejs') %>
+<div class="container">
+  <!-- Cover Picture -->
+  <div class="cover"></div>
+
+  <!-- Welcome Message -->
+  <section class="welcome">
+    <h2>Welcome to Fotheby’s Auction House</h2>
+    <p>Explore our auctions and categories to find your perfect piece of fine art.</p>
+  </section>
+
+  <!-- Auction Items Grid -->
+  <section class="auction-grid">
+    <div class="auction-item">
+      <img src="https://via.placeholder.com/300x200" alt="Auction Item 1">
+      <div class="item-details">
+        <h3>Art Piece 1</h3>
+        <p>A beautiful piece of art from the 18th century.</p>
+        <p class="price">$2,000</p>
+      </div>
+    </div>
+
+    <div class="auction-item">
+      <img src="https://via.placeholder.com/300x200" alt="Auction Item 2">
+      <div class="item-details">
+        <h3>Art Piece 2</h3>
+        <p>A stunning sculpture from a renowned artist.</p>
+        <p class="price">$3,500</p>
+      </div>
+    </div>
+
+    <div class="auction-item">
+      <img src="https://via.placeholder.com/300x200" alt="Auction Item 3">
+      <div class="item-details">
+        <h3>Art Piece 3</h3>
+        <p>An exquisite painting from the modern era.</p>
+        <p class="price">$1,800</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial History -->
+  <section class="financial-history">
+    <h2>Your Financial History</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Item</th>
+          <th>Bid</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2024-12-01</td>
+          <td>Art Piece 1</td>
+          <td>$2,000</td>
+          <td>Won</td>
+        </tr>
+        <tr>
+          <td>2024-12-02</td>
+          <td>Art Piece 3</td>
+          <td>$1,800</td>
+          <td>Lost</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<%- include('partials/footer.ejs') %>
 </body>
 </html>

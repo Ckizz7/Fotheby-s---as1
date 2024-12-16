@@ -5,15 +5,51 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <% include partials/navbar %>
-    <% include partials/header %>
+    <%- include('partials/header.ejs') %>
 
-    <section>
-      <h2>Categories</h2>
-      <p>Explore our curated categories of fine art, including paintings, sculptures, and more.</p>
-      <img src="/images/placeholder.jpg" alt="Categories Placeholder" />
-    </section>
+<div class="breadcrumb">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>/</li>
+    <li>Categories</li>
+  </ul>
+</div>
 
-    <% include partials/footer %>
+<div class="container">
+  <!-- Welcome Message -->
+  <section class="welcome">
+    <h2>Categories</h2>
+    <p>Explore our curated categories of fine art, including paintings, sculptures, and more.</p>
+  </section>
+
+  <!-- Categories Grid -->
+  <section class="auction-grid">
+    <div class="auction-item">
+      <img src="https://via.placeholder.com/300x200" alt="Paintings">
+      <div class="item-details">
+        <h3>Paintings</h3>
+        <p>Discover a stunning collection of timeless paintings.</p>
+      </div>
+    </div>
+
+    <div class="auction-item">
+      <img src="https://via.placeholder.com/300x200" alt="Sculptures">
+      <div class="item-details">
+        <h3>Sculptures</h3>
+        <p>Explore exquisite sculptures by renowned artists.</p>
+      </div>
+    </div>
+
+    <div class="auction-item">
+      <img src="https://via.placeholder.com/300x200" alt="Photography">
+      <div class="item-details">
+        <h3>Photography</h3>
+        <p>Browse breathtaking photography collections.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<%- include('partials/footer.ejs') %>
   </body>
 </html>

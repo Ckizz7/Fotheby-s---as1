@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+
+<div class="breadcrumb">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>/</li>
+    <li>Profile</li>
+  </ul>
+</div>
+
+<div class="container">
+  <h1>Notification Preferences</h1>
+  <form action="/update-preferences" method="POST">
+    <label for="method">Preferred Communication Method:</label>
+    <select id="method" name="method">
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+      <option value="social_media">Social Media</option>
+    </select>
+
+    <button type="submit">Save Preferences</button>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs') %>

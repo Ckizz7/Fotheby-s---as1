@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs') %>
+
+<div class="breadcrumb">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>/</li>
+    <li>Evaluation</li>
+  </ul>
+</div>
+
+<div class="container">
+  <h1>Item Evaluation</h1>
+  <form action="/submit-evaluation" method="POST">
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" required>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <label for="evaluationType">Evaluation Type:</label>
+    <select id="evaluationType" name="evaluationType">
+      <option value="online">Online</option>
+      <option value="in-person">In-Person</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs') %>

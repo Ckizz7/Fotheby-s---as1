@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+<div class="breadcrumb">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>/</li>
+    <li>Live Auction</li>
+  </ul>
+</div>
+
+<div class="container">
+  <h1>Live Auction</h1>
+  <video controls autoplay>
+    <source src="/path-to-live-stream" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<%- include('partials/footer.ejs') %>

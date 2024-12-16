@@ -5,15 +5,54 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <% include partials/navbar %>
-    <% include partials/header %>
+    <%- include('partials/header.ejs') %>
 
-    <section>
-      <h2>Current Auctions</h2>
-      <p>Browse the ongoing auctions and bid on your favorite items.</p>
-      <img src="/images/placeholder.jpg" alt="Auctions Placeholder" />
-    </section>
-
-    <% include partials/footer %>
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li>/</li>
+        <li>Auctions</li>
+      </ul>
+    </div>
+    
+    <div class="container">
+      <!-- Welcome Message -->
+      <section class="welcome">
+        <h2>Current Auctions</h2>
+        <p>Browse the ongoing auctions and bid on your favorite items.</p>
+      </section>
+    
+      <!-- Auctions Grid -->
+      <section class="auction-grid">
+        <div class="auction-item">
+          <img src="https://via.placeholder.com/300x200" alt="Auction Item 1">
+          <div class="item-details">
+            <h3>Art Piece 1</h3>
+            <p>A beautiful piece of art from the 18th century.</p>
+            <p class="price">$2,000</p>
+          </div>
+        </div>
+    
+        <div class="auction-item">
+          <img src="https://via.placeholder.com/300x200" alt="Auction Item 2">
+          <div class="item-details">
+            <h3>Art Piece 2</h3>
+            <p>A stunning sculpture from a renowned artist.</p>
+            <p class="price">$3,500</p>
+          </div>
+        </div>
+    
+        <div class="auction-item">
+          <img src="https://via.placeholder.com/300x200" alt="Auction Item 3">
+          <div class="item-details">
+            <h3>Art Piece 3</h3>
+            <p>An exquisite painting from the modern era.</p>
+            <p class="price">$1,800</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <%- include('partials/footer.ejs') %>
   </body>
 </html>
